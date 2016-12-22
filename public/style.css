@@ -1,0 +1,81 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+:root {
+  --main-blue: #073D86;
+  --main-red: ##F70101;
+  --main-bg-color: #F1FAEE;
+  --main-accent: #AEC5EB;
+  --main-dark: #3A405A;
+}
+
+html,
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 0px;
+  height: 100%;
+  color: white;
+}
+
+body {
+  min-height: 100%;
+  background: linear-gradient( to top, var( --main-dark), var(--main-accent) );
+}
+
+h1 {
+  font-weight: bold;
+  color: pink;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.logo {
+  float: left;
+}
+.logotext{
+  margin: 0px;
+}
+.menuitems {
+  float: right;
+  margin: 0px;
+}
+.menuitem {
+  margin: 0px;
+  -webkit-margin: 0px;
+  -webkit-padding: 0px;
+  display: inline;
+}
+
+.exploretab {
+  float: left;
+}
+
+.asktab {
+  
+}
+.listdropdown {
+  text-align: center;
+}
+
+.filters {
+  position: absolute;
+  right: 0px;
+}
+.filteritem{
+  float:left;
+}
+.graphspace {
+  position: relative;
+  text-align: center;
+}
+
+.suggestbutton {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;width:100%;
+}
