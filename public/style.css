@@ -6,7 +6,7 @@
 
 :root {
   --main-blue: #073D86;
-  --main-red: ##F70101;
+  --main-red: #F70101;
   --main-bg-color: #F1FAEE;
   --main-accent: #AEC5EB;
   --main-dark: #3A405A;
@@ -72,6 +72,7 @@ h1 {
 .graphspace {
   position: relative;
   text-align: center;
+  height: 200px;
 }
 
 .suggestbutton {

@@ -1,8 +1,8 @@
 
-var biobreaksapp = angular.module('biobreaksapp', []);
+var biobreaksapp = angular.module('biobreaksapp', ['chart.js']);
 
 biobreaksapp.controller('FutureController', function FutureController($scope){
-  $scope.test = "TEST 1"
+  $scope.test = "TEST 1";
   $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
   $scope.series = ['Series A', 'Series B'];
   $scope.data = [
