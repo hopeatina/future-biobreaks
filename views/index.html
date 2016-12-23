@@ -8,61 +8,74 @@
 <!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
 
 <!DOCTYPE html>
-<html ng-app='biobreaksapp' >
-  <head>
-    <title>Welcome to Gomix!</title>
+<html ng-app='biobreaksapp'>
+<head>
+    <title>BioBreaks - Futures</title>
     <meta name="description" content="A cool thing made with Gomix">
-    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
+    <link id="favicon" rel="icon" href="https://d4z6dx8qrln4r.cloudfront.net/image-575985198966d-default.png"
+          type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
-  </head>
-  <body ng-controller="FutureController">
-    <header>
-      <div class="logo">LOGO {{test}} </div>
-      <ul class="menuitems">
+</head>
+<body ng-controller="FutureController">
+<header>
+    <div class="logo">LOGO {{test}}</div>
+    <ul class="menuitems">
         <li class="menuitem">Future</li>
         <li class="menuitem">Chat</li>
         <li class="menuitem">About</li>
-      </ul>
-      <div class="logotext">
+    </ul>
+    <div class="logotext">
         BIOBREAKS
-      </div>
-      
-    </header>
-          <div class="filters"><div class="filteritem">Time Period</div><div class="filteritem">Graph Type</div> </div>
+    </div>
 
-    <div class="exploretab">
-        Explore
-      </div>
-      <div class="asktab" >Ask</div>
-      <div class="listdropdown">Technology List</div>
-      
-      <div class="graphspace">
-        Graph<div>
-        <canvas id="line" class="" chart-data="data"
-chart-labels="labels" chart-series="series" chart-options="options"
-chart-dataset-override="datasetOverride" chart-click="onClick">
-</canvas>
+</header>
+<div class="filters">
+    <div class="filteritem">Time Period</div>
+    <div class="filteritem">Graph Type</div>
 </div>
-      </div>
-      
-      <div class="suggestbutton">
-        Suggest a Graph
-      </div>
-      
+
+<div class="exploretab">
+    Explore
+</div>
+<div class="asktab">Ask {{data.selectedGraphData}}  <button ng-click="updateGraph(data.boom)">PRESS ME</button></div>
+<div class="listdropdown">Technology List
+    <select  ng-change="updateGraph(3)"
+             name="singleSelect"
+             ng-model="data.boom"
+             ng-options="option.value as option.name for option in graphOptions ">
+
+        <!--<option   ng-repeat="" value="{{option.value}}">{{option.name}} {{option.value}}</option>-->
+        <!--<option value="option-2">Option 2</option>-->
+    </select>
+</div>
+
+<div class="graphspace">
+    Graph
+    <div>
+        <canvas id="line" class="chart chart-line" chart-data="data.selectedGraphData"
+                chart-labels="labels" chart-series="series" chart-options="options"
+                chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+    </div>
+</div>
+{{data.boom}}
+<div class="suggestbutton">
+    Suggest a Graph
+</div>
 
 
-    <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-    <script src="/client.js"></script>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
-    <script src="/app.js"></script>
-  </body>
+<!-- Your web-app is https, so your scripts need to be too -->
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"
+        integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+        crossorigin="anonymous"></script>
+<script src="/client.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+<script src="/app.js"></script>
+</body>
 </html>

@@ -12,17 +12,20 @@
   --main-dark: #3A405A;
 }
 
-html,
-body {
+html{
   font-family: helvetica, arial, sans-serif;
   margin: 0px;
   height: 100%;
   color: white;
+  background: linear-gradient( to top, var( --main-dark), var(--main-accent) );
+
 }
 
 body {
   min-height: 100%;
+  margin: 0px;
   background: linear-gradient( to top, var( --main-dark), var(--main-accent) );
+
 }
 
 h1 {
@@ -72,11 +75,18 @@ h1 {
 .graphspace {
   position: relative;
   text-align: center;
-  height: 200px;
+  height: 70%;
+  width: 70%;
 }
 
 .suggestbutton {
   position: absolute;
   bottom: 0px;
   text-align: center;width:100%;
+}
+
+canvas {
+  padding: 0px !important;
+  margin: auto !important;
+  display: block;
 }
