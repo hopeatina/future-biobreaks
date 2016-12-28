@@ -20,51 +20,63 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body ng-controller="FutureController">
-<header>
-    <div class="logo">LOGO {{test}}</div>
+<header class="header-top">
+    <img class="topimage" src="https://vectr.com/theonlyhope/designs/untitled-d7lyyZ6Ol.png">
     <ul class="menuitems">
-        <li class="menuitem">Future</li>
+        <li class="menuitem" >Home</li>
+        <li class="menuitem" style="border-bottom-width: 5px;">Future</li>
         <li class="menuitem">Chat</li>
         <li class="menuitem">About</li>
     </ul>
-    <div class="logotext">
-        BIOBREAKS
+    <div class="center-logo">
+        <button class="subscribe"> Subscribe</button>
     </div>
 
 </header>
-<div class="filters">
-    <div class="filteritem">Time Period</div>
-    <div class="filteritem">Graph Type</div>
-</div>
+<!--<div class="filters">-->
+    <!--<div class="filteritem">Time Period</div>-->
+    <!--<div class="filteritem">Graph Type</div>-->
+<!--</div>-->
 
-<div class="exploretab">
-    Explore
+<div tooltip="Explore" tooltip-position="bottom" class="exploretab">
+   <img class="globe" src="https://maxcdn.icons8.com/Android_L/PNG/512/Maps/globe-512.png">
 </div>
-<div class="asktab">Ask {{data.selectedGraphData}}  <button ng-click="updateGraph(data.boom)">PRESS ME</button></div>
-<div class="listdropdown">Technology List
-    <select  ng-change="updateGraph(3)"
-             name="singleSelect"
-             ng-model="data.boom"
-             ng-options="option.value as option.name for option in graphOptions ">
+<div tooltip="Ask" tooltip-position="bottom" class="asktab">
+    <div>
+    <img class="question" src="https://cdn2.iconfinder.com/data/icons/bold-ui/100/questionmark-512.png">
+    </div>
+    <!--<button ng-click="updateGraph(data.boom)">PRESS ME</button>-->
+</div>
+<div class="listdropdown">
+    <select class="dropdown" ng-change="updateGraph(3)"
+            name="singleSelect"
+            ng-model="data.boom"
+            ng-options="option as option.name for option in graphOptions ">
+        <option value="" disabled selected>Select a graph</option>
 
         <!--<option   ng-repeat="" value="{{option.value}}">{{option.name}} {{option.value}}</option>-->
         <!--<option value="option-2">Option 2</option>-->
     </select>
 </div>
 
-<div class="graphspace">
-    Graph
-    <div>
-        <canvas id="line" class="chart chart-line" chart-data="data.selectedGraphData"
-                chart-labels="labels" chart-series="series" chart-options="options"
-                chart-dataset-override="datasetOverride" chart-click="onClick">
-        </canvas>
-    </div>
+<div google-chart chart="chart"
+     style="margin-left: 10%;
+    margin-top: -50px; ">
 </div>
-{{data.boom}}
-<div class="suggestbutton">
-    Suggest a Graph
-</div>
+
+<!--<div class="graphspace">-->
+<!--Graph-->
+<!--<div>-->
+<!--<canvas id="line" class="" chart-data="data.selectedGraphData"-->
+<!--chart-labels="labels" chart-colors="colors" chart-options="options" chart-line=""-->
+<!--chart-dataset-override="datasetOverride" chart-click="onClick">-->
+<!--</canvas>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash;{{data.boom}}&ndash;&gt;-->
+<!--<div class="suggestbutton">-->
+    <!--Suggest a Graph-->
+<!--</div>-->
 
 
 <!-- Your web-app is https, so your scripts need to be too -->
@@ -74,8 +86,9 @@
 <script src="/client.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
 <script src="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+<script src="http://bouil.github.io/angular-google-chart/ng-google-chart.js"></script>
 <script src="/app.js"></script>
 </body>
 </html>

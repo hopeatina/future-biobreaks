@@ -5,88 +5,282 @@
 /* less: http://lesscss.org/ */
 
 :root {
-  --main-blue: #073D86;
-  --main-red: #F70101;
-  --main-bg-color: #F1FAEE;
-  --main-accent: #AEC5EB;
-  --main-dark: #3A405A;
+    --main-blue: #073D86;
+    --main-red: #F70101;
+    --main-bg-color: #AEC5EB;
+    --main-accent: #F1FAEE;
+    --main-dark: #3A405A;
 }
 
-html{
-  font-family: helvetica, arial, sans-serif;
-  margin: 0px;
-  height: 100%;
-  color: white;
-  background: linear-gradient( to top, var( --main-dark), var(--main-accent) );
+html {
+    font-family: helvetica, arial, sans-serif;
+    margin: 0px;
+    height: 100%;
+    color: white;
+    background: linear-gradient(to top, var(--main-accent), var(--main-bg-color), var(--main-dark));
 
 }
 
 body {
-  min-height: 100%;
-  margin: 0px;
-  background: linear-gradient( to top, var( --main-dark), var(--main-accent) );
-
+    min-height: 100%;
+    margin: 0px;
+    background: linear-gradient(to top, var(--main-accent), #cbcbcb);
+    /* background: linear-gradient( to top, var(--main-accent), var(--main-bg-color), var( --main-dark)  ); */
 }
 
 h1 {
-  font-weight: bold;
-  color: pink;
+    font-weight: bold;
+    color: pink;
 }
 
 .bold {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .logo {
-  float: left;
+    float: left;
+    margin-top: 40px;
+    /* margin-right: 10px; */
+    margin-left: 10px;
 }
-.logotext{
-  margin: 0px;
+
+.logotext {
+    /* margin: 0px; */
 }
+
 .menuitems {
-  float: right;
-  margin: 0px;
+    float: left;
+    margin-top: -25px;
+    margin-right: 10px;
 }
+
 .menuitem {
-  margin: 0px;
-  -webkit-margin: 0px;
-  -webkit-padding: 0px;
-  display: inline;
+    margin: 0px;
+    border-bottom-width: 5px;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    /* margin-bottom: 5px; */
+    /* border-style: hidden; */
+    border-bottom: solid #236bff;
+    /* background: antiquewhite; */
+    -webkit-margin: 0px;
+    -webkit-padding: 0px;
+    display: inline;
+    /* border-bottom: var(--main-accent); */
+    /* border-bottom: 5px; */
+    /* border-color: var(--main-accent); */
 }
 
 .exploretab {
-  float: left;
+    float: left;
+    background: red;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    height: 75px;
+    width: 75px;
+    left: -150px;
+    padding-top: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px grey;
 }
 
 .asktab {
-  
+    position: relative;
+    /* left: 34px; */
+    background: red;
+    top: 40px;
+    z-index: 1;
+    height: 75px;
+    width: 75px;
+    left: 5%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px grey;
 }
+
 .listdropdown {
-  text-align: center;
+    text-align: center;
+    border-radius: 5px;
+    /* margin-top: -10px; */
+    /* display: block; */
+    margin-top: -148px;
 }
 
 .filters {
-  position: absolute;
-  right: 0px;
+    position: absolute;
+    right: 10px;
+    top: 165px;
 }
-.filteritem{
-  float:left;
+
+.filteritem {
+    float: left;
 }
+
 .graphspace {
-  position: relative;
-  text-align: center;
-  height: 70%;
-  width: 70%;
+    position: relative;
+    text-align: center;
+    height: 50%;
+    width: 75%;
+    margin-left: 12.5%;
 }
 
 .suggestbutton {
-  position: absolute;
-  bottom: 0px;
-  text-align: center;width:100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
 }
 
 canvas {
-  padding: 0px !important;
-  margin: auto !important;
-  display: block;
+    padding: 0px !important;
+    margin: auto !important;
+    display: block;
+}
+
+.dropdown {
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 66px;
+    margin-bottom: 80px;
+    z-index: 10;
+}
+
+.header-top {
+    height: 100px;
+    background:  linear-gradient(to bottom, var(--main-dark), #313752);
+    padding-top: 10px;
+    box-shadow:  0px 0px 50px 2px grey;
+}
+
+body > div:nth-child(5) > div > div:nth-child(1) > div{
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0px 0px 7px 1px grey;
+}
+
+.globe {
+    height: 50px;
+    width: 50px;
+    background: white;
+    border-radius: 50%;
+    /* margin-top: 25px; */
+    margin: 12.5px;
+}
+.question {
+    position: relative;
+    top: -75px;
+    height: 50px;
+    width: 50px;
+    background: white;
+    border-radius: 50%;
+    /* margin-top: 54px; */
+    margin: 12px;
+}
+
+.center-logo {
+    /* height:inherit; */
+    float: right;
+    right: 26px;
+    top: 63px;
+    position: absolute;
+    /* padding: 10px; */
+    /* font-size: -webkit-xxx-large; */
+}
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    padding: 7px 10px;
+    max-width: 250px;
+    color: #fff;
+}
+
+.tooltip-show {
+    display: inherit;
+}
+
+.tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.tooltip-down .tooltip-arrow {
+    top: -5px;
+    left: 50%;
+    margin-left: -5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #222;
+}
+
+.tooltip-up .tooltip-arrow {
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #222;
+}
+
+.tooltip-right .tooltip-arrow {
+    left: -5px;
+    top: 50%;
+    margin-top: -3px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #222;
+}
+
+.tooltip-left .tooltip-arrow {
+    right: -5px;
+    top: 50%;
+    margin-top: -3px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #222;
+}
+
+.topimage {
+    height: 75px;
+    display: block;
+    /* position: static; */
+    margin-top: 12.5px;
+    background: white;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topimage {
+    height: 75px;
+    display: block;
+    /* position: static; */
+    margin-top: 12.5px;
+    background: white;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topimage {
+    height: 75px;
+    display: block;
+    /* position: static; */
+    margin-top: 12.5px;
+    background: white;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe {
+    font-size: inherit;
+    background: linear-gradient(45deg, #1313ff, #0b4697, #0d50a8);
+    color: white;
+    /* border: solid; */
+    border-radius: 5px;
+    padding: 5px;
 }
