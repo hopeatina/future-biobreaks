@@ -54,6 +54,18 @@ h1 {
     margin-right: 10px;
 }
 
+.menuitem a {
+    text-decoration: none;
+    color: white;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+.menuitem a:hover {
+    color: grey;
+}
+
 .menuitem {
     margin: 0px;
     border-bottom-width: 5px;
@@ -61,7 +73,7 @@ h1 {
     padding-bottom: 5px;
     /* margin-bottom: 5px; */
     /* border-style: hidden; */
-    border-bottom: solid #236bff;
+    border-bottom: solid white;
     /* background: antiquewhite; */
     -webkit-margin: 0px;
     -webkit-padding: 0px;
@@ -69,6 +81,9 @@ h1 {
     /* border-bottom: var(--main-accent); */
     /* border-bottom: 5px; */
     /* border-color: var(--main-accent); */
+}
+.menuitem:hover {
+    color: grey;
 }
 
 .exploretab {
@@ -283,4 +298,11 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
     /* border: solid; */
     border-radius: 5px;
     padding: 5px;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+.subscribe:hover {
+    background: grey;
 }

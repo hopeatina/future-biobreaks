@@ -1,4 +1,36 @@
-var biobreaksapp = angular.module('biobreaksapp', ['chart.js', 'googlechart']);
+var biobreaksapp = angular.module('biobreaksapp', ['googlechart','ngRoute']);
+biobreaksapp.config(['$routeProvider', '$locationProvider',
+    function($routeProvider, $locationProvider) {
+        $locationProvider.html5Mode(true);
+        // $routeProvider
+        //     . when('/future', {
+        //         templateUrl: '../../future.html',
+        //         controller: 'FutureController',
+        //         controllerAs: 'FutureController'
+        //     })
+        //     .when('/about', {
+        //         templateUrl: 'about.html',
+        //         controller: 'AboutCtrl',
+        //         controllerAs: 'AboutCtrl'
+        //     })
+        //     .when('/chat', {
+        //         templateUrl: 'chat.html',
+        //         controller: 'ChatCtrl',
+        //         controllerAs: 'ChatCtrl'
+        //     })
+        //     .when('/home', {
+        //         templateUrl: 'home.html',
+        //         controller: 'HomeCtrl',
+        //         controllerAs: 'HomeCtrl'
+        //     })
+        //     .when('/', {
+        //         templateUrl: '../views/home.html',
+        //         controller: 'HomeCtrl',
+        //         controllerAs: 'HomeCtrl'
+        //     }).otherwise({ redirectTo: 'index.html' });
+
+        // $locationProvider.html5Mode(true);
+    }]);
 
 biobreaksapp.controller('FutureController', function FutureController($scope, $window) {
     $scope.test = "TEST 1";
@@ -9,7 +41,6 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
         [65, 59, 80, 81, 56, 55, 40]
     ];
     $scope.data.boom.value = $scope.data.selectedGraphData;
-    console.log(typeof(parseInt(parseInt(Math.floor(Math.random() * 100)))), typeof($scope.data.selectedGraphData));
 
     function convertToSuper(value) {
         var final = "";
@@ -94,7 +125,7 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
     }
 
     var obj = newArray();
-    $scope.colors = ['#45b7cd', '#ff6384', '#ff8e72'];
+    $scope.colors = ['green', 'orange', 'purple', 'yellow', 'pink','black','red'];
     $scope.graphOptions = [
         // {name: "OPTION 1", value: newArray(), options: {}, log: {x: false, y: false}},
         {
@@ -210,6 +241,7 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
         $scope.chart.options.hAxis.scaleType = $scope.data.boom.log.x ? 'log' : null;
         $scope.chart.options.hAxis.title = $scope.data.boom.title.x;
         $scope.chart.options.vAxis.title = $scope.data.boom.title.y;
+        $scope.chart.options.series[0].color = $scope.colors[Math.round(Math.random()*$scope.colors.length-1)];
         $scope.chart.data = [
             [$scope.data.boom.title.y, $scope.data.boom.title.y]
         ].concat($scope.data.boom.value);
@@ -289,6 +321,10 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
             title: $scope.graphOptions[randomoption].title.y,
             logScale: $scope.graphOptions[randomoption].log.y
         },
+        series: {
+            0: { color: 'green', areaOpacity: 0.4},
+            1: { color: '#004411',areaOpacity: 0.7}
+        },
         // explorer: {},
         pointsVisible: true,
         legend: {position: 'none'},
@@ -310,14 +346,30 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
     };
 
     $scope.chart = chart1;
-    // $scope.updateGraph(0)
+
     console.log($scope);
 
-    // $scope.aa=1*$scope.chart.data[1][1];
-    // $scope.bb=1*$scope.chart.data[2][1];
-    // $scope.cc=1*$scope.chart.data[3][1];
-});
-    biobreaksapp.directive('tooltip', function ($document, $compile) {
+
+})
+    .controller('AboutCtrl', ['$route', '$routeParams', '$location',
+        function AboutCtrl($route, $routeParams, $location) {
+            this.$route = $route;
+            this.$location = $location;
+            this.$routeParams = $routeParams;
+        }])
+    .controller('ChatCtrl', ['$route', '$routeParams', '$location',
+        function ChatCtrl($route, $routeParams, $location) {
+            this.$route = $route;
+            this.$location = $location;
+            this.$routeParams = $routeParams;
+        }])
+    .controller('HomeCtrl', ['$route', '$routeParams', '$location',
+        function HomeCtrl($route, $routeParams, $location) {
+            this.$route = $route;
+            this.$location = $location;
+            this.$routeParams = $routeParams;
+        }]);
+biobreaksapp.directive('tooltip', function ($document, $compile) {
     return {
         restrict: 'A',
         scope: true,

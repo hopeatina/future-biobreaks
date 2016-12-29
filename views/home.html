@@ -11,7 +11,7 @@
 <html ng-app='biobreaksapp'>
 <head>
     <!--<base href="/">-->
-    <title>BioBreaks  - Futures</title>
+    <title>BioBreaks  - Home</title>
     <meta name="description" content="A cool thing made with Gomix">
     <link id="favicon" rel="icon" href="https://d4z6dx8qrln4r.cloudfront.net/image-575985198966d-default.png"
           type="image/x-icon">
@@ -20,13 +20,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
 </head>
-<body ng-controller = "FutureController">
+<body ng-controller = "HomeCtrl">
 <header class="header-top">
     <img class="topimage" src="https://vectr.com/theonlyhope/designs/untitled-d7lyyZ6Ol.png">
     <ul class="menuitems">
-        <li  class="menuitem" ><a href="/home">Home</a></li>
-        <li class="menuitem" style="border-bottom: 10px solid #236bff;
-"><a href="/future">Future</a></li>
+        <li  class="menuitem" style="border-bottom: 10px solid #236bff;
+" ><a href="/home">Home</a></li>
+        <li class="menuitem" ><a href="/future">Future</a></li>
         <li class="menuitem"><a href="/chat">Chat</a></li>
         <li class="menuitem"><a href="/about">About</a></li>
     </ul>
@@ -36,53 +36,15 @@
 
 </header>
 <!--<div class="filters">-->
-    <!--<div class="filteritem">Time Period</div>-->
-    <!--<div class="filteritem">Graph Type</div>-->
+<!--<div class="filteritem">Time Period</div>-->
+<!--<div class="filteritem">Graph Type</div>-->
 <!--</div>-->
 
 <!--<div class="view-animate-container">-->
-    <!--<div ng-view class="view-animate"></div>-->
+<!--<div ng-view class="view-animate"></div>-->
 <!--</div>-->
 
-<div tooltip="Explore" tooltip-position="bottom" class="exploretab">
-   <img class="globe" src="https://maxcdn.icons8.com/Android_L/PNG/512/Maps/globe-512.png">
-</div>
-<div tooltip="Ask" tooltip-position="bottom" class="asktab">
-    <div>
-    <img class="question" src="https://cdn2.iconfinder.com/data/icons/bold-ui/100/questionmark-512.png">
-    </div>
-    <!--<button ng-click="updateGraph(data.boom)">PRESS ME</button>-->
-</div>
-<div class="listdropdown">
-    <select class="dropdown" ng-change="updateGraph(3)"
-            name="singleSelect"
-            ng-model="data.boom"
-            ng-options="option as option.name for option in graphOptions ">
-        <option value="" disabled selected>Select a graph</option>
 
-        <!--<option   ng-repeat="" value="{{option.value}}">{{option.name}} {{option.value}}</option>-->
-        <!--<option value="option-2">Option 2</option>-->
-    </select>
-</div>
-
-<div google-chart chart="chart"
-     style="margin-left: 10%;
-    margin-top: -50px; ">
-</div>
-
-<!--<div class="graphspace">-->
-<!--Graph-->
-<!--<div>-->
-<!--<canvas id="line" class="" chart-data="data.selectedGraphData"-->
-<!--chart-labels="labels" chart-colors="colors" chart-options="options" chart-line=""-->
-<!--chart-dataset-override="datasetOverride" chart-click="onClick">-->
-<!--</canvas>-->
-<!--</div>-->
-<!--</div>-->
-<!--&lt;!&ndash;{{data.boom}}&ndash;&gt;-->
-<!--<div class="suggestbutton">-->
-    <!--Suggest a Graph-->
-<!--</div>-->
 
 
 <!-- Your web-app is https, so your scripts need to be too -->
