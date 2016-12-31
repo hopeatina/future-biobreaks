@@ -320,7 +320,7 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
     border-radius: 5px;
-    margin: 1px;
+    /* margin: 1px; */
     background: white;
     color: black;
     box-shadow: 0px 0px 1px 1px grey;
@@ -370,11 +370,15 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
 
 .grid-1 {
     z-index: -1;
-    border: 1px solid red;
+    border: 2px solid #08ca10;
     height: 66%;
     width: 33%;
-    background: linear-gradient(26deg, white 47%, #ececec 50%, #ffffff 0%);
+    background: linear-gradient(0deg, white 47%, #ececec 50%, #ffffff 0%);
     float: left;
+    /* border: 2px; */
+    overflow: hidden;
+    background-size: contain;
+    background-image: url(http://ecomercioagrario.com/wp-content/uploads/2016/06/Biotecnolog%C3%ADa-agraria1-1030x686.jpg);
 }
 
 .grid-1-card {
@@ -384,6 +388,7 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     /* background: linear-gradient(0deg, #ffffff 49%, #cac6c6 50%, #ffffff 0%); */
+    background: linear-gradient(-135deg, rgb(92, 220, 98),#08ca10);
     /* margin-top: -71%; */
     /* top: -50%; */
     z-index: 10;
@@ -391,11 +396,15 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
 }
 
 .grid-2 {
-    border: 1px solid red;
+    border: 2px solid #a02dca;
     float: left;
     height: 33%;
     width: 66%;
     background: linear-gradient(-90deg, white 49%, #ececec 50%, #ffffff 0%);
+    overflow: hidden;
+    background-size: cover;
+    background-position: left;
+    background-image: url(http://myndset.com/wp-content/uploads/2016/02/2016-02-10-15.17.28.jpg);
 }
 .grid-2-card {
     height: 100%;
@@ -403,6 +412,7 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
     position: relative;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+    background: linear-gradient(-135deg, #a02dca,#A34CCA);
     /* background: linear-gradient(0deg, #ffffff 49%, #cac6c6 50%, #ffffff 0%); */
     /* margin-top: -71%; */
     margin: 0%;
@@ -412,35 +422,59 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
 }
 
 .grid-3 {
-    border: 1px solid red;
+    border: 2px solid black;
     width: 33%;
     height: 33%;
     float: left;
+    overflow: hidden;
+    background: url(https://3dprintingindustry.com/wp-content/uploads/2015/02/biobots-low-cost-bioprinter-1-906x906.png);
+    background-size: cover;
 }
 .grid-3-card {
-     height:100%;
-     position: relative;
-     width: 100%;
-     background: linear-gradient(0deg, #ffffff 49%, #cac6c6 50%, #ffffff 0%);
-     /* margin-top: -71%; */
-     top: 100%;
-     z-index: 10;
- }
+    height:100%;
+    position: relative;
+    width: 100%;
+    background: linear-gradient(0deg, #ffffff 49%, #cac6c6 50%, #ffffff 0%);
+    /* margin-top: -71%; */
+    top: 100%;
+    z-index: 10;
+}
 .grid-4 {
-    border: 1px solid red;
+    border: 2px solid #ca141b;
     width: 33%;
     height: 66%;
     float: left;
     background: linear-gradient(0deg, white 49%, #ececec 50%, #ffffff 0%);
+    overflow: hidden;
+    background-size: contain;
+    background-image: url(http://images.wisegeek.com/tipped-bottle-of-pills.jpg);
 }
+
+.grid-4-card {
+    height: 50%;
+    position: relative;
+    width: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    /* background: linear-gradient(0deg, #ffffff 49%, #cac6c6 50%, #ffffff 0%); */
+    background: linear-gradient(-135deg, #ca141b,#CA2C34);
+    /* margin-top: -71%; */
+    /* top: -50%; */
+    z-index: 10;
+    margin: 0px;
+}
+
 .grid-5 {
-    border: 1px solid red;
+    border: 2px solid #fff335;
     width: 66%;
     height: 33%;
     float: left;
     position: relative;
     top: -33%;
     background: linear-gradient(-90deg, white 49%, #ececec 50%, #ffffff 0%);
+    overflow: hidden;
+    background-size: contain;
+    background-image: url(http://cccb.dfci.harvard.edu/image/journal/article?img_id=55138&t=1475688787404);
 }
 .grid-5-card {
     height: 100%;
@@ -448,6 +482,7 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
     position: relative;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+    background: linear-gradient(-135deg, #fff335,#FDFF45);
     /* background: linear-gradient(0deg, #ffffff 49%, #cac6c6 50%, #ffffff 0%); */
     /* margin-top: -71%; */
     margin: 0%;
@@ -458,10 +493,10 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
 
 .g1image {
     height:50%;
-    z-index: 11;
+    z-index: -1;
     margin: auto;
     display: block;
-    margin-bottom: px;
+    /*margin-bottom: px;*/
     position: relative;
     bottom: 0px;
 }
@@ -469,6 +504,7 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
 .g2image {
     position: relative;
     /* width: 50%; */
+    z-index: -5;
     height: 100%;
     margin-left: 7.5%;
     /* margin: auto; */
@@ -479,9 +515,50 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
 
 .g3image {
     height: 100%;
-    z-index: 11;
+    z-index: -2;
     margin: auto;
     display: block;
     position: relative;
     bottom: 0px;
+}
+
+.topic-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    border: solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+.green {
+    background: #08ca10;
+}
+
+.purple {
+    background: #a02dca;
+}
+
+.yellow {
+    background: #fff335;
+}
+
+.red {
+    background: #ca141b;
+}
+.prod-title {
+    font-size: 16px;
+    color: White;
+    position: relative;
+    top: 5%;
+    left: 5%;
+    width: 95%;
+}
+.prod-sub-title {
+    font-size: 12px;
+    color: #000000;
+    position: relative;
+    top: 10%;
+    left: 5%;
+    width: 95%;
 }
