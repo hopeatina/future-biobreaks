@@ -163,7 +163,7 @@ canvas {
 .header-top {
     height: 100px;
     background:  linear-gradient(to bottom, var(--main-dark), #313752);
-    padding-top: 10px;
+    padding-top: 1px;
     box-shadow:  0px 0px 50px 2px grey;
 }
 
@@ -198,7 +198,7 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
     /* height:inherit; */
     float: right;
     right: 26px;
-    top: 63px;
+    top: 55px;
     position: absolute;
     /* padding: 10px; */
     /* font-size: -webkit-xxx-large; */
@@ -295,7 +295,7 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
     font-size: inherit;
     background: linear-gradient(45deg, #1313ff, #0b4697, #0d50a8);
     color: white;
-    /* border: solid; */
+    border: solid;
     border-radius: 5px;
     padding: 5px;
     -moz-transition: all .2s ease-in;
@@ -305,4 +305,183 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
 }
 .subscribe:hover {
     background: grey;
+}
+
+* {
+    box-sizing: border-box;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+
+[class*="grid-"] {
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
+    margin: 1px;
+    background: white;
+    color: black;
+    box-shadow: 0px 0px 1px 1px grey;
+}
+
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+.container{
+    height: 600px;
+    margin-right: 4%;
+    margin-left: 5%;
+    padding: 2%;
+}
+
+.grid-1 {
+    z-index: -1;
+    border: 1px solid red;
+    height: 66%;
+    width: 33%;
+    background: linear-gradient(26deg, white 47%, #ececec 50%, #ffffff 0%);
+    float: left;
+}
+
+.grid-1-card {
+    height: 50%;
+    position: relative;
+    width: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    /* background: linear-gradient(0deg, #ffffff 49%, #cac6c6 50%, #ffffff 0%); */
+    /* margin-top: -71%; */
+    /* top: -50%; */
+    z-index: 10;
+    margin: 0px;
+}
+
+.grid-2 {
+    border: 1px solid red;
+    float: left;
+    height: 33%;
+    width: 66%;
+    background: linear-gradient(-90deg, white 49%, #ececec 50%, #ffffff 0%);
+}
+.grid-2-card {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    /* background: linear-gradient(0deg, #ffffff 49%, #cac6c6 50%, #ffffff 0%); */
+    /* margin-top: -71%; */
+    margin: 0%;
+    top: -100%;
+    right: -50%;
+    z-index: 10
+}
+
+.grid-3 {
+    border: 1px solid red;
+    width: 33%;
+    height: 33%;
+    float: left;
+}
+.grid-3-card {
+     height:100%;
+     position: relative;
+     width: 100%;
+     background: linear-gradient(0deg, #ffffff 49%, #cac6c6 50%, #ffffff 0%);
+     /* margin-top: -71%; */
+     top: 100%;
+     z-index: 10;
+ }
+.grid-4 {
+    border: 1px solid red;
+    width: 33%;
+    height: 66%;
+    float: left;
+    background: linear-gradient(0deg, white 49%, #ececec 50%, #ffffff 0%);
+}
+.grid-5 {
+    border: 1px solid red;
+    width: 66%;
+    height: 33%;
+    float: left;
+    position: relative;
+    top: -33%;
+    background: linear-gradient(-90deg, white 49%, #ececec 50%, #ffffff 0%);
+}
+.grid-5-card {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    /* background: linear-gradient(0deg, #ffffff 49%, #cac6c6 50%, #ffffff 0%); */
+    /* margin-top: -71%; */
+    margin: 0%;
+    top: -100%;
+    left: 50%;
+    z-index: 10;
+}
+
+.g1image {
+    height:50%;
+    z-index: 11;
+    margin: auto;
+    display: block;
+    margin-bottom: px;
+    position: relative;
+    bottom: 0px;
+}
+
+.g2image {
+    position: relative;
+    /* width: 50%; */
+    height: 100%;
+    margin-left: 7.5%;
+    /* margin: auto; */
+    display: block;
+    /* background: 100%; */
+    /* overflow-y: hidden; */
+}
+
+.g3image {
+    height: 100%;
+    z-index: 11;
+    margin: auto;
+    display: block;
+    position: relative;
+    bottom: 0px;
 }
