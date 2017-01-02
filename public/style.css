@@ -305,6 +305,7 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
     -o-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
+    text-decoration:none
 }
 .subscribe:hover {
     background: grey;
