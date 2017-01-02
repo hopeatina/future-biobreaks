@@ -366,7 +366,7 @@ body > div:nth-child(5) > div > div:nth-child(1) > div{
 }
 
 .container{
-    min-height: 600px;
+    height: 600px;
     margin-right: 4%;
     margin-left: 5%;
     /* padding: 2%; */
