@@ -11,7 +11,7 @@
 <html ng-app='biobreaksapp'>
 <head>
     <!--<base href="/">-->
-    <title>BioBreaks - Chat</title>
+    <title>BioBreaks - Discuss</title>
     <meta name="description" content="A cool thing made with Gomix">
     <link id="favicon" rel="icon" href="https://d4z6dx8qrln4r.cloudfront.net/image-575985198966d-default.png"
           type="image/x-icon">
@@ -20,14 +20,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
 </head>
-<body ng-controller = "ChatCtrl">
+<body ng-controller="ChatCtrl">
 <header class="header-top">
     <img class="topimage" src="https://vectr.com/theonlyhope/designs/untitled-d7lyyZ6Ol.png">
     <ul class="menuitems">
-        <li  class="menuitem"  ><a href="/home">Home</a></li>
-        <li class="menuitem" ><a href="/future">Future</a></li>
+        <li class="menuitem"><a href="/home">Home</a></li>
+        <li class="menuitem"><a href="/future">Future</a></li>
         <li class="menuitem" style="border-bottom: 10px solid #236bff;
-"><a href="/chat">Chat</a></li>
+"><a href="/chat">Discuss</a></li>
         <li class="menuitem"><a href="/about">About</a></li>
     </ul>
     <div class="center-logo">
@@ -40,16 +40,51 @@
 <!--<div class="filteritem">Graph Type</div>-->
 <!--</div>-->
 
+
 <!--<div class="view-animate-container">-->
 <!--<div ng-view class="view-animate"></div>-->
 <!--</div>-->
+<div class="discuss-background">
 
-<a class="typeform-share button" href="https://biobreaks.typeform.com/to/giuTkj" data-mode="1" target="_blank">Launch me!</a>
-<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
+    <div class="discuss-card">
+        <img class="slack-icon" src="Slackicon.png">
+        <div class="discuss-text">Join the BioBreaks Slack community! Sign up and discuss in various channels ranging from
+            #bioinformatics to #syntheticbiology.
+        </div>
+
+        <div class="buttons">
+            <a class="launch-button typeform-share button" href="https://biobreaks.slack.com/messages"
+                    target="_blank"> Launch Slack
+            </a>
+        </div>
+        <div class="buttons">
+            <a class="join-button typeform-share button" href="https://biobreaks.typeform.com/to/giuTkj" data-mode="1"
+               target="_blank">Join
+                Now!</a>
+            <script>(function () {
+                var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = 'typef_orm', b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
+                if (!gi.call(d, id)) {
+                    js = ce.call(d, 'script');
+                    js.id = id;
+                    js.src = b + 'share.js';
+                    q = gt.call(d, 'script')[0];
+                    q.parentNode.insertBefore(js, q)
+                }
+                id = id + '_';
+                if (!gi.call(d, id)) {
+                    qs = ce.call(d, 'link');
+                    qs.rel = 'stylesheet';
+                    qs.id = id;
+                    qs.href = b + 'share-button.css';
+                    s = gt.call(d, 'head')[0];
+                    s.appendChild(qs, s)
+                }
+            })()</script>
+        </div>
+    </div>
 
 
-
-
+</div>
 
 
 <!-- Your web-app is https, so your scripts need to be too -->
@@ -63,7 +98,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>-->
 <!--<script src="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>-->
-<script src="http://bouil.github.io/angular-google-chart/ng-google-chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-google-chart/0.1.0/ng-google-chart.js"
+        type="text/javascript"></script>
 <script src="/app.js"></script>
 </body>
 </html>

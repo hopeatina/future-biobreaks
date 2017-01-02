@@ -1,36 +1,36 @@
 var biobreaksapp = angular.module('biobreaksapp', ['googlechart','ngRoute']);
-biobreaksapp.config(['$routeProvider', '$locationProvider',
-    function($routeProvider, $locationProvider) {
-        $locationProvider.html5Mode(true);
-        // $routeProvider
-        //     . when('/future', {
-        //         templateUrl: '../../future.html',
-        //         controller: 'FutureController',
-        //         controllerAs: 'FutureController'
-        //     })
-        //     .when('/about', {
-        //         templateUrl: 'about.html',
-        //         controller: 'AboutCtrl',
-        //         controllerAs: 'AboutCtrl'
-        //     })
-        //     .when('/chat', {
-        //         templateUrl: 'chat.html',
-        //         controller: 'ChatCtrl',
-        //         controllerAs: 'ChatCtrl'
-        //     })
-        //     .when('/home', {
-        //         templateUrl: 'home.html',
-        //         controller: 'HomeCtrl',
-        //         controllerAs: 'HomeCtrl'
-        //     })
-        //     .when('/', {
-        //         templateUrl: '../views/home.html',
-        //         controller: 'HomeCtrl',
-        //         controllerAs: 'HomeCtrl'
-        //     }).otherwise({ redirectTo: 'index.html' });
-
-        // $locationProvider.html5Mode(true);
-    }]);
+// biobreaksapp.config(['$routeProvider', '$locationProvider',
+//     function($routeProvider, $locationProvider) {
+//         $locationProvider.html5Mode(true);
+//         // $routeProvider
+//         //     . when('/future', {
+//         //         templateUrl: '../../future.html',
+//         //         controller: 'FutureController',
+//         //         controllerAs: 'FutureController'
+//         //     })
+//         //     .when('/about', {
+//         //         templateUrl: 'about.html',
+//         //         controller: 'AboutCtrl',
+//         //         controllerAs: 'AboutCtrl'
+//         //     })
+//         //     .when('/chat', {
+//         //         templateUrl: 'chat.html',
+//         //         controller: 'ChatCtrl',
+//         //         controllerAs: 'ChatCtrl'
+//         //     })
+//         //     .when('/home', {
+//         //         templateUrl: 'home.html',
+//         //         controller: 'HomeCtrl',
+//         //         controllerAs: 'HomeCtrl'
+//         //     })
+//         //     .when('/', {
+//         //         templateUrl: '../views/home.html',
+//         //         controller: 'HomeCtrl',
+//         //         controllerAs: 'HomeCtrl'
+//         //     }).otherwise({ redirectTo: 'index.html' });
+//
+//         // $locationProvider.html5Mode(true);
+//     }]);
 
 biobreaksapp.controller('FutureController', function FutureController($scope, $window) {
     $scope.test = "TEST 1";
@@ -182,13 +182,80 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
                 [2010, 5.8],
                 [2020, 6.1]
             ],
-            labels: ["Milky Way", "Life on Earth", "First Eukaryotes",
-                "First Multicellular life", "Cambrian Explosion", "First mammals", "First flowering plants", "Asteroid collision", "First hominoids", "First orangutan", "Chimpanzees and humans diverge", "First stone tools", "Emergence of Homo sapiens", "Domestication of fire",
-                "Domestication of fire", "Differentiation of human DNA Types", "Emergence of modern Humans", "Rock art, protowriting", "Invention of agriculture",
-                "Techniques for starting fire", "Development of the wheel, writing", "Democracy", "Zero and decimals", "Renaissance (printing press)", "Industrial Revolution",
-                "Modern physics", "DNA structure, transistor, nuclear, energy"],
+            labels: [],
             options: {},
             title: {x: 'Year', y: 'Revenue Dollars (millions)'},
+            log: {x: false, y: true}
+        },
+        {
+            name: "Mass Use of Inventions",
+            value: [[1877, 1.25],
+                [1898, 1.24],
+                [1926, 1.2],
+                [1978, 1.08],
+                [1985, 1.03],
+                [1992, .7]
+            ],
+            labels: ["Telephone", "Radio", "Television",
+                "PC", "Mobile Phone", "The Web"],
+            options: {},
+            title: {x: 'Year', y: 'Years Until Use by 1/4 U.S. Population'},
+            log: {x: false, y: true}
+        },
+        {
+            name: "Dynamic RAM Price",
+            value: [[1971, 2.1],
+                [1972, 2.2],
+                [1973, 2.3],
+                [1974, 2.6],
+                [1975, 2.9],
+                [1976, 3.05],
+                [1977, 3.06],
+                [1978, 3.15],
+                [1979, 3.25],
+                [1980, 3.6],
+                [1981, 3.7],
+                [1982, 3.68],
+                [1983, 4.07],
+                [1984, 4.1],
+                [1985, 4.2],
+                [1986, 4.3],
+                [1987, 4.8],
+                [1988, 5],
+                [1989, 5.03],
+                [1990, 5.06],
+                [1991, 5.11],
+                [1992, 5.2],
+                [1993, 5.25],
+                [1994, 5.3],
+                [1995, 5.5],
+                [1996, 6.02],
+                [1997, 6.1],
+                [1998, 6.2],
+                [1999, 6.5],
+                [2000, 6.9],
+                [2001, 7.03],
+                [2002, 7.08],
+                [2004, 7.1],
+                [2005, 7.2],
+                [2006, 7.5],
+                [2007, 7.9],
+                [2008, 8.05],
+                [2009, 8.1],
+                [2010, 8.15],
+                [2011, 8.3],
+                [2012, 8.6],
+                [2013, 9],
+                [2014, 9.05 ],
+                [2015, 9.1],
+                [2016, 9.3],
+                [2017, 9.6],
+                [2018, 9.9],
+                [2019, 10.1]
+            ],
+            labels: [],
+            options: {},
+            title: {x: 'Year', y: 'DRAM Bits/ Dollar'},
             log: {x: false, y: true}
         }
         // {name: "OPTION 3", value: newArray(), log: {x: true, y: true}}
@@ -363,11 +430,17 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
             this.$location = $location;
             this.$routeParams = $routeParams;
         }])
-    .controller('HomeCtrl', ['$route', '$routeParams', '$location',
-        function HomeCtrl($route, $routeParams, $location) {
+    .controller('HomeCtrl', ['$route', '$routeParams', '$scope',
+        function HomeCtrl($route, $routeParams, $scope) {
             this.$route = $route;
-            this.$location = $location;
+            // this.$location = $location;
             this.$routeParams = $routeParams;
+            $scope.viewBool = false;
+            console.log($scope.viewBool);
+            $scope.switchView = function () {
+                $scope.viewBool = !$scope.viewBool;
+                console.log($scope.viewBool);
+            }
         }]);
 biobreaksapp.directive('tooltip', function ($document, $compile) {
     return {
