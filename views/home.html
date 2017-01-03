@@ -44,7 +44,7 @@
 <!--<div ng-view class="view-animate"></div>-->
 <!--</div>-->
 <div style="height: 7px;"></div>
-<div class="home-weekly">The Weekly Five - January 7, 2016</div>
+<div class="home-weekly">The Weekly Five - January 9, 2016</div>
 <div class="container">
     <div class="prod-container" ng-if="viewBool">
         <div class="pexit" ng-click="switchView()"></div>
@@ -52,12 +52,20 @@
             <img class="pimage-selected" src="https://vectr.com/theonlyhope/designs/untitled-d7lyyZ6Ol.png">
         </div>
         <div class="pstats-container">
-            <div class="p-title-cont"><div class="p-title"> PRODUCT TITLE</div><div class="p-description"> PRODUCT DESCRIPTION</div></div>
-            <div class="p-attr-row" ng-repeat="attr in selected.attributes"> <div class="p-q-name">{{attr.name}} <div class="p-q-value"> {{attr.value}}</div></div></div>
+            <div class="p-title-cont">
+                <div class="p-title"> PRODUCT TITLE</div>
+                <div class="p-description"> PRODUCT DESCRIPTION</div>
+            </div>
+            <div class="p-attr-row" ng-repeat="attr in selected.attributes">
+                <div class="p-q-name">{{attr.name}}
+                    <div class="p-q-value"> {{attr.value}}</div>
+                </div>
+            </div>
+            <div class="company-text"> Made by Company X</div>
         </div>
 
         <div class="pgraph-container">
-            <div class="p-graph"> GRAPH HEREEE</div>
+            <div class="p-graph"> <div class="prod-graph" google-chart chart="chart"></div></div>
         </div>
         <div class="pshout-out">
 

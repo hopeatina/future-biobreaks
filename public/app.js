@@ -256,6 +256,186 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
             labels: [],
             options: {},
             title: {x: 'Year', y: 'DRAM Bits/ Dollar'},
+            log: {x: false, y: false}
+        },
+        {
+            name: "Average Transistor Price (Dollars)",
+            value: [
+
+               [1968,	0],
+                   [1969,	-0.070581074],
+                   [1970,	-0.22184875],
+                   [1971,	-0.522878745],
+                   [1972,	-0.823908741],
+                   [1973,	-1],
+                   [1974,	-1.15490196],
+                   [1975,	-1.552841969],
+                    [1976,	-1.823908741],
+                    [1977,	-2.096910013],
+                    [1978,	-2.301029996],
+                    [1979,	-2.698970004],
+                    [1980,	-2.886056648],
+                    [1981,	-3.086186148],
+                    [1982,	-3.397940009],
+                    [1983,	-3.494850022],
+                    [1984,	-3.494850022],
+                    [1985,	-3.823908741],
+                    [1986,	-4.045757491],
+                    [1987,	-4.091514981],
+                    [1988,	-4.22184875],
+                    [1989,	-4.455931956],
+                    [1990,	-4.698970004],
+                    [1991,	-4.769551079],
+                    [1992,	-5],
+                    [1993,	-5.045757491],
+                    [1994,	-5.096910013],
+                    [1995,	-5.15490196],
+                    [1996,	-5.301029996],
+                    [1997,	-5.522878745],
+                    [1998,	-5.853871964],
+                    [1999,	-6.022276395],
+                    [2000,	-6.096910013],
+                    [2001,	-6.455931956],
+                    [2002,	-6.585026652]
+            ],
+            labels: [],
+            options: {},
+            title: {x: 'Year', y: 'Dollars'},
+            log: {x: false, y: true}
+        },
+        {
+            name: "Moore's Law, The 5th Paradigm",
+            value: [
+                [1900, -5.235002401],
+                [1908, -3.886390849],
+                [1911, -4.237546518],
+                [1919, -2.973058372],
+                [1928, -3.155336472],
+                [1939, -2.068186296],
+                [1940, -1.844360366],
+                [1941, -1.334419009],
+                [1943, 0.724930914],
+                [1946, -0.097942689],
+                [1948, -0.432033093],
+                [1949, 0.264109156],
+                [1949, 0.018700499],
+                [1951, 0.155336037],
+                [1953, 0.785614525],
+                [1953, 1.074816441],
+                [1954, -0.435452288],
+                [1955, 1.216165902],
+                [1955, 0.536305872],
+                [1958, -0.487182241],
+                [1958, -0.038863783],
+                [1960, 0.180125875],
+                [1960, 2.180412633],
+                [1961, 2.451018452],
+                [1962, 1.468790262],
+                [1964, 2.200303183],
+                [1965, 2.683587318],
+                [1965, 3.253338005],
+                [1966, 1.69653112],
+                [1968, 2.329601248],
+                [1973, 2.862489167],
+                [1973, 3.531606632],
+                [1975, 4.024485668],
+                [1976, 2.890421019],
+                [1977, 3.57054294],
+                [1977, 4.429267666],
+                [1979, 3.046885191],
+                [1980, 3.749813585],
+                [1982, 5.102433706],
+                [1982, 5.102433706],
+                [1983, 4.935910136],
+                [1984, 4.929572179],
+                [1986, 5.730943693],
+                [1987, 5.36660971],
+                [1993, 6.550105999],
+                [1996, 7.681964459],
+                [1998, 8.124830149]
+
+            ],
+            labels: [],
+            options: {},
+            title: {x: 'Year', y: 'Calculations per Second per $1000'},
+            log: {x: false, y: true}
+        },
+        {
+            name: "DNA Sequencing Cost Per Genome",
+            value: [
+                ["9/30/2001", 95263072],
+                ["3/31/2002", 70175437],
+                ["9/30/2002", 61448422],
+                ["3/31/2003", 53751684],
+                ["10/31/2003", 40157554],
+                ["1/31/2004", 28780376],
+                ["4/30/2004", 20442576],
+                ["7/31/2004", 19934346],
+                ["10/31/2004", 18519312],
+                ["1/31/2005", 17534970],
+                ["4/30/2005", 16159699],
+                ["7/31/2005", 16180224],
+                ["10/31/2005", 13801124],
+                ["1/31/2006", 12585659],
+                ["4/30/2006", 11732535],
+                ["7/31/2006", 11455315],
+                ["10/31/2006", 10474556],
+                ["1/31/2007", 9408739],
+                ["4/30/2007", 9047003],
+                ["7/31/2007", 8927342],
+                ["10/31/2007", 7147571],
+                ["1/31/2008", 3063820],
+                ["4/30/2008", 1352982],
+                ["7/31/2008", 752080],
+                ["10/31/2008", 342502],
+                ["1/31/2009", 232735],
+                ["4/30/2009", 154714],
+                ["7/31/2009", 108065],
+                ["10/31/2009", 70333],
+                ["1/31/2010", 46774],
+                ["4/30/2010", 31512],
+                ["7/31/2010", 31125],
+                ["10/31/2010", 29092],
+                ["1/31/2011", 20963],
+                ["4/30/2011", 16712],
+                ["7/31/2011", 10497],
+                ["10/30/2011", 7743],
+                ["1/31/2012", 7666],
+                ["4/30/2012", 5901],
+                ["7/31/2012", 5985],
+                ["10/31/2012", 6618],
+                ["1/31/2013", 5671],
+                ["4/30/2013", 5826],
+                ["7/31/2013", 5550],
+                ["10/31/2013", 5096],
+                ["1/31/2014", 4008],
+                ["4/30/2014", 4920],
+                ["7/31/2014", 4905],
+                ["10/31/2014", 5731],
+                ["1/31/2015", 3970],
+                ["4/30/2015", 4211],
+                ["7/31/2015", 1363],
+                ["10/15/2015", 1245]
+
+            ],
+            labels: [],
+            options: {},
+            title: {x: 'Date', y: 'Cost per Genome ($)'},
+            log: {x: false, y: false}
+        },
+        {
+            name: "Decrease in Size of Mechanical Devices",
+            value: [
+                [1967, -0.364717362],
+                [1983, -0.89279003],
+                [1988, -1.22184875],
+                [1994, -3.301029996],
+                [1999, -4.920818754],
+                [2004, -5.366531544]
+            ],
+            labels: [],
+            options: {},
+            title: {x: 'Year', y: 'Diameter (mm)'},
             log: {x: false, y: true}
         }
         // {name: "OPTION 3", value: newArray(), log: {x: true, y: true}}
@@ -295,6 +475,7 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
             $scope.options.scales.xAxes[0].ticks.min = $scope.data.selectedGraphData[0].x;
             $scope.options.scales.xAxes[0].ticks.max = $scope.data.selectedGraphData[$scope.data.selectedGraphData.length - 1].x;
             $scope.options.scales.xAxes[0].ticks.fixedStepSize = 5;
+
         }
 
         $scope.options.scales.xAxes[0].ticks.reverse = $scope.data.boom.log.x;
@@ -302,9 +483,10 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
             $scope.options.scales.xAxes[0].type = $scope.xtype;
         }
         console.log(typeof($scope.data.selectedGraphData), $scope);
+        $scope.chart.options.title = $scope.data.boom.name;
         $scope.chart.options.hAxis.direction = $scope.data.boom.log.x ? -1 : 1;
         $scope.chart.options.hAxis.format = $scope.data.boom.log.x ? 'scientific' : '#';
-        $scope.chart.options.vAxis.format = $scope.data.boom.log.y ? 'scientific' : 'none';
+        $scope.chart.options.vAxis.format = $scope.data.boom.log.y ? 'scientific' : '#';
         $scope.chart.options.hAxis.scaleType = $scope.data.boom.log.x ? 'log' : null;
         $scope.chart.options.hAxis.title = $scope.data.boom.title.x;
         $scope.chart.options.vAxis.title = $scope.data.boom.title.y;
@@ -374,8 +556,9 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
     ];
 
     chart1.data = chart1.data.concat($scope.graphOptions[randomoption].value);
-
+    $scope.data.boom.name = $scope.graphOptions[randomoption].name;
     chart1.options = {
+        title: $scope.graphOptions[randomoption].name,
         backgroundColor: { stroke: 'transparent', fill: 'transparent'},
         hAxis: {
             title: $scope.graphOptions[randomoption].title.x,
@@ -403,10 +586,12 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
     };
 
     chart1.formatters = {
-        number: [{
+        number: [
+            {
             columnNum: 1,
-            pattern: "short"
-        },{
+            pattern: "0.0E00"
+        },
+            {
             columnNum: 0,
             pattern: "#"
         }]
@@ -443,18 +628,72 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
             };
 
             $scope.selected = { attributes: [
-                {name: "Size", value: 10},
-                {name: "Cost", value: 10},
-                {name: "Date", value: 10},
-                {name: "Size", value: 10},
+                {name: "Size", value: "10 nm"},
+                {name: "Cost", value: "$10"},
+                {name: "Date", value: 2010},
+                {name: "Weight", value: "10kg"},
                 {name: "Time", value: "10 minutes"},
-                {name: "Realiability", value: "10 minutes"},
-                {name: "Efficiency", value: "10 minutes"},
-                {name: "Accuracy", value: "10 minutes"},
-                {name: "Precision", value: "10 minutes"},
-                {name: "Power", value: "10 minutes"},
-                {name: "Lifespan", value: "10 minutes"}]
+                {name: "Realiability", value: "10 cycles"},
+                {name: "Efficiency", value: "100%"},
+                {name: "Accuracy", value: "10%"},
+                {name: "Precision", value: "+/- 10%"},
+                {name: "Power", value: "10 mW"},
+                {name: "Lifespan", value: "10 years"}]
                 };
+
+            var chart1 = {};
+            chart1.type = "AreaChart";
+
+            chart1.data = [
+                ["Product Lifetime Span", "Product Values"]
+            ];
+            var fakedata =[];
+            for (var i =0; i < 10; i++)
+            {
+                fakedata.push([i, Math.exp(i)]);
+            }
+
+            chart1.data = chart1.data.concat(fakedata);
+            // $scope.data.boom.name = "Temporary Graph";
+            chart1.options = {
+                title: "Core Attribute Over Time Chart",
+                backgroundColor: { stroke: 'transparent', fill: 'transparent'},
+                hAxis: {
+                    title: "TempTitle X",
+                    direction: 1 ,
+                    format: '#',
+                    // scaleType: 'log',
+                    logScale: false
+                },
+                vAxis: {
+                    title: "TempTitle Y",
+                    logScale: false
+                },
+                series: {
+                    0: { color: '#236bff', areaOpacity: 0.8},
+                    1: { color: 'blue', areaOpacity: 0.7}
+                },
+                // explorer: {},
+                pointsVisible: true,
+                legend: {position: 'bottom'},
+                curveType: 'function',
+                // displayExactValues: true,
+                width: '50%',
+                height: '50%'
+                // chartArea: {left:10,top:10,bottom:0,height:"100%"}
+            };
+
+            chart1.formatters = {
+                number: [{
+                    columnNum: 1,
+                    pattern: "short"
+                },{
+                    columnNum: 0,
+                    pattern: "#"
+                }]
+            };
+
+            $scope.chart = chart1;
         }]);
 biobreaksapp.directive('tooltip', function ($document, $compile) {
     return {
