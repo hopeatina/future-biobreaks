@@ -30,7 +30,8 @@
         <li class="menuitem"><a href="/about">About</a></li>
     </ul>
     <div class="center-logo">
-        <a class="subscribe" href="https://biobreaks.typeform.com/to/giuTkj" data-mode="1" target="_blank"> Subscribe </a>
+        <a class="subscribe" href="https://biobreaks.typeform.com/to/giuTkj" data-mode="1" target="_blank">
+            Subscribe </a>
     </div>
 
 </header>
@@ -46,15 +47,23 @@
 <div class="home-weekly">The Weekly Five - January 7, 2016</div>
 <div class="container">
     <div class="prod-container" ng-if="viewBool">
-        <div class="pexit" ng-click="switchView()" ></div>
+        <div class="pexit" ng-click="switchView()"></div>
         <div class="pimage-container">
+            <img class="pimage-selected" src="https://vectr.com/theonlyhope/designs/untitled-d7lyyZ6Ol.png">
+        </div>
+        <div class="pstats-container">
+            <div class="p-title-cont"><div class="p-title"> PRODUCT TITLE</div><div class="p-description"> PRODUCT DESCRIPTION</div></div>
+            <div class="p-attr-row" ng-repeat="attr in selected.attributes"> <div class="p-q-name">{{attr.name}} <div class="p-q-value"> {{attr.value}}</div></div></div>
+        </div>
+
+        <div class="pgraph-container">
+            <div class="p-graph"> GRAPH HEREEE</div>
+        </div>
+        <div class="pshout-out">
 
         </div>
-        <div class="pstats-container"></div>
-        <div class="pgraph-container"></div>
-        <div class="pshout-out"></div>
     </div>
-    <div ng-hide="viewBool" ng-click="switchView()"  class="grid-1">
+    <div ng-hide="viewBool" ng-click="switchView()" class="grid-1">
         <img class="g1image" src="https://vectr.com/theonlyhope/designs/untitled-d7lyyZ6Ol.png">
         <div class="grid-1-card">
             <div class="prod-title">Title of Product</div>

@@ -440,7 +440,21 @@ biobreaksapp.controller('FutureController', function FutureController($scope, $w
             $scope.switchView = function () {
                 $scope.viewBool = !$scope.viewBool;
                 console.log($scope.viewBool);
-            }
+            };
+
+            $scope.selected = { attributes: [
+                {name: "Size", value: 10},
+                {name: "Cost", value: 10},
+                {name: "Date", value: 10},
+                {name: "Size", value: 10},
+                {name: "Time", value: "10 minutes"},
+                {name: "Realiability", value: "10 minutes"},
+                {name: "Efficiency", value: "10 minutes"},
+                {name: "Accuracy", value: "10 minutes"},
+                {name: "Precision", value: "10 minutes"},
+                {name: "Power", value: "10 minutes"},
+                {name: "Lifespan", value: "10 minutes"}]
+                };
         }]);
 biobreaksapp.directive('tooltip', function ($document, $compile) {
     return {
