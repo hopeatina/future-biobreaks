@@ -17,7 +17,7 @@ html {
     margin: 0px;
     min-height: 100%;
     color: white;
-    background: linear-gradient(34deg, #3a3939 47%, var(--main-blue) 47%);
+    background: linear-gradient(34deg,#f7f5f5, grey 45%, #3a3939 45%, var(--main-blue) 47%);
 }
 
 body {
